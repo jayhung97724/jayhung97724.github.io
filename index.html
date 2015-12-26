@@ -16,7 +16,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>
   <!-- 引入CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
-  <link href="css/ninja-slider.css" rel="stylesheet" type="text/css" />
+  <link href="css/ninja-slider.css" rel="stylesheet" type="text/css">
   <script src="js/control.js"></script>
   
   <script>
@@ -58,7 +58,7 @@
             tellMeWhat: getFieldValue(form, 'tellmewhat')
         };
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbxoIf19ii0eL6CVzYSsvmo_qglkH1wXe3_rfgstAESvj9GB7fu_/exec',
+            url: 'https://script.google.com/macros/s/AKfycbyTg6xetaUkWqIJHBMJ9J8y40uuY0o-Q9M1cIJP0hJklhUvON-V/exec',
             type: 'POST',
             dataType: 'json',
             data: formData,
@@ -82,19 +82,17 @@
       <i class="video camera icon"></i>
       About me
     </a>
-    <a id="mbtn3" class="item">
+    <a id="mbtn3" class="item" href="#timelinejs">
       <i class="heartbeat icon"></i>
-      Sotory
+      Story
     </a>
-    <a id="mbtn4" class="item">
+    <a id="mbtn4" class="item" href="#contactMe">
       <i class="video play icon"></i>
       Contact me
     </a>
   </div>
-
-  <div class="space"></div>
   <!-- 這裡放 照片slide -->
-  <div id="photoSlide" class="section">
+  <div id="photoSlide">
     <div id="ninja-slider">
         <div class="slider-inner">
             <ul id="inphoto">
@@ -110,7 +108,6 @@
   <!-- 這裡放 自我介紹 -->
   <div id="selfIntroduction" class="section">
     <div class="space"></div>
-
     <div class="ui stackable three column grid container">
       <!-- my photo card -->
       <div id='myphoto' class="column">
@@ -120,9 +117,9 @@
             <img src="img/p2v.jpg" class="hidden content">
           </div>
           <div class="content">
-            <a class="header">Bacon Yao</a>
+            <a class="header">YoYo Hung</a>
             <div class="meta">
-              <span class="date">A handsome guy!</span>
+              <span class="date">A sweet boy!</span>
             </div>
           </div>
           <div class="extra content">
@@ -137,34 +134,28 @@
               </div>
               <div class="image content">
                 <div class="ui medium image">
-                  <img src="img/icon.jpg">
+                  <img src="img/12345.jpg">
                 </div>
                 <div class="description">
                   <div class="ui header">嗨，我是洪浩祐  :D</div>
                   <p>很高興你來觀賞我的網站，若你想更認識我的話，可以加我的FB或在網頁的最下端發送訊息給我。</p>
-                  <p>若你只是隨便瀏覽的話，非常的歡迎。</p>
+                  <p>若你只是剛好路過，非常的歡迎。</p>
                 </div>
               </div>
               <div class="actions">
-                <a href="https://www.facebook.com/bacon735392" target="_blank">
+                <a href="https://www.facebook.com/haoyou.hung" target="_blank">
                   <button class="ui facebook button">
                     <i class="facebook icon"></i>
                     Facebook
                   </button>
                 </a>
-                <a href="https://plus.google.com/103003372248466066456" target="_blank">
-                  <button class="ui google plus button">
-                    <i class="google plus icon"></i>
-                    Facebook
-                  </button>
-                </a>
-                <a href="https://github.com/baconYao" target="_blank">
+                <a href="https://github.com/jayhung97724" target="_blank">
                   <button class="ui github button">
                     <i class="github icon"></i>
                     Github
                   </button>
                 </a>
-                <a href="https://www.instagram.com/bacon735392/" target="_blank">
+                <a href="https://www.instagram.com/jayhung97724/" target="_blank">
                   <button class="ui instagram button">
                     <i class="instagram icon"></i>
                     Instagram
@@ -183,57 +174,25 @@
       <div id='myskill' class="column">
         <i class="big configure icon">Language</i>
         <div style="height:5px;"></div>
-        <div id="p_java" class="ui yellow active progress">
-          <div class="bar" style="width:80%">
-            <div class="progress">80%</div>
+        <div id="p_html" class="ui yellow active progress">
+          <div class="bar" style="width:35%">
+            <div class="progress">35%</div>
           </div>
-          <div class="label">Java</div>
+          <div class="label">Html</div>
         </div>
         <div id="p_c" class="ui yellow active progress">
-          <div class="bar" style="width:80%">
-            <div class="progress">80%</div>
+          <div class="bar" style="width:30%">
+            <div class="progress">30%</div>
           </div>
           <div class="label">C\C++</div>
         </div>
         <div id="p_javascript" class="ui olive active progress">
-          <div class="bar" style="width:70%">
-            <div class="progress">70%</div>
+          <div class="bar" style="width:25%">
+            <div class="progress">25%</div>
           </div>
           <div class="label">Javascript</div>
         </div>
-        <div id="p_html" class="ui olive active progress">
-          <div class="bar" style="width:70%">
-            <div class="progress">70%</div>
-          </div>
-          <div class="label">Html</div>
-        </div>
-        <div id="p_jsp" class="ui olive active progress">
-          <div class="bar" style="width:70%">
-            <div class="progress">70%</div>
-          </div>
-          <div class="label">JSP</div>
-        </div>
-        <div id="p_markdown" class="ui olive active progress">
-          <div class="bar" style="width:70%">
-            <div class="progress">70%</div>
-          </div>
-          <div class="label">Markdown</div>
-        </div>
-        <div id="p_python" class="ui blue active progress">
-          <div class="bar" style="width:60%">
-            <div class="progress">60%</div>
-          </div>
-          <div class="label">Python</div>
-        </div>
-        <div id="p_php" class="ui blue active progress">
-          <div class="bar" style="width:60%">
-            <div class="progress">60%</div>
-          </div>
-          <div class="label">PHP</div>
-        </div>
-      </div>
-      <!-- show software-->
-      <div id='software' class="column">
+        <!-- show software-->
         <i class="big file icon">Software</i>
         <div style="height:5px;"></div>
         <div id="p_word" class="ui orange active progress">
@@ -248,20 +207,62 @@
           </div>
           <div class="label">Power Point</div>
         </div>
-        <div id="p_powerd" class="ui pink active progress">
+        <div id="p_page" class="ui pink active progress">
           <div class="bar" style="width:60%">
             <div class="progress">60%</div>
           </div>
-          <div class="label">Power Director</div>
+          <div class="label">Page</div>
         </div>
-        <div id="p_imovie" class="ui pink active progress">
+        <div id="p_keynote" class="ui pink active progress">
           <div class="bar" style="width:60%">
             <div class="progress">60%</div>
+          </div>
+          <div class="label">Keynote</div>
+        </div>
+        <div id="p_imovie" class="ui pink active progress">
+          <div class="bar" style="width:50%">
+            <div class="progress">50%</div>
           </div>
           <div class="label">Imovie</div>
         </div>
       </div>
+      <!-- show music-->
+      <div id='music' class="column">
+        <i class="big file icon">Music</i>
+        <div style="height:5px;"></div>
+        <div id="p_word" class="ui yellow active progress">
+          <div class="bar" style="width:90%">
+            <div class="progress">90%</div>
+          </div>
+          <div class="label">Piano</div>
+        </div>
+        <div id="p_ppt" class="ui yellow active progress">
+          <div class="bar" style="width:80%">
+            <div class="progress">80%</div>
+          </div>
+          <div class="label">Violin</div>
+        </div>
+        <div id="p_page" class="ui green active progress">
+          <div class="bar" style="width:60%">
+            <div class="progress">50%</div>
+          </div>
+          <div class="label">Viola</div>
+        </div>
+        <div id="p_keynote" class="ui blue active progress">
+          <div class="bar" style="width:60%">
+            <div class="progress">45%</div>
+          </div>
+          <div class="label">Cello</div>
+        </div>
+        <div id="p_imovie" class="ui blue active progress">
+          <div class="bar" style="width:40%">
+            <div class="progress">40%</div>
+          </div>
+          <div class="label">Guitar</div>
+        </div>
+      </div>
     </div>
+    <div class="smallspace"></div>
   </div>
     <!-- 這裡放 timelinejs -->
   <div id="timelinejs" class="section">
@@ -269,8 +270,11 @@
   </div>
   <!-- 這裡放 聯絡我 -->
   <div id="contactMe" class="section">
-      <div class="space"></div>
+      
       <div class="ui one column centered grid container">
+      <div class="sixteen wide column" style="text-align: center;">
+        <h1 style="color: cornflowerblue">不敢親口說,寫成文字吧!</h1>
+      </div>
         <form class="ui large form segment">
           <div class="field">
             <label>Your name</label>
