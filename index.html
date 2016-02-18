@@ -43,13 +43,15 @@
         .always(function() {
           console.log("complete");
         });
-
+      /*取得form單一輸入框的值, 第一個參數form是jquery selector*/
       function getFieldValue(myform, fieldName) {
         var text = myform.form('get value', fieldName);
         if (text != "") return text;
         else return "none";
       }
-
+      $('form').submit(function(){
+        return false;
+      });
       $("#contactBtn").click(function() {
         var form = $(".ui.form");  
         var formData = {
@@ -57,12 +59,15 @@
             yourEmail: getFieldValue(form, 'youremail'),
             tellMeWhat: getFieldValue(form, 'tellmewhat')
         };
+        console.log(formData);
         $.ajax({
             url: 'https://script.google.com/macros/s/AKfycbyTg6xetaUkWqIJHBMJ9J8y40uuY0o-Q9M1cIJP0hJklhUvON-V/exec',
             type: 'POST',
             dataType: 'json',
             data: formData,
-            success: function(){console.log('yes')},
+            success: function(response){
+              console.log(response);
+            },
             fail: function(){console.log('no')}
         });
       });     
@@ -296,19 +301,16 @@
 
    
   <!-- 這裡放 footer -->
-  <div class="ui green inverted vertical footer segment">
+  <div class="ui grey inverted vertical footer segment">
     <div class="ui center aligned container">
       <div class="ui stackable inverted divided grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">QR code</h4>
-          <div class="ui inverted link list">
-            
-          </div>
-        </div>
+        <!-- <div class="one wide column">
+          anything
+        </div> -->
         <div class="three wide column">
           <h4 class="ui inverted header">My Country</h4>
           <div class="ui inverted link list">
-            <i class="massive tw flag"></i>
+            <i class="large tw flag"></i>
             <p>Taiwan</p>
           </div>
         </div>
@@ -324,11 +326,17 @@
           <h4 class="ui inverted header">Thanks for your watching</h4>
           <p>If you have any question,you can use contact me segment send message to me.In addition,you can be my friend through Facebook.</p>
         </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Contact Info</h4>
+          <div class="ui inverted link list">
+          <a class="item" href="https://www.facebook.com/haoyou.hung" target="_blnak"><i class="facebook square icon"></i>Facebook</a>
+          <a class="item" href="mailto:jayhung97724@gmail.com" target="_blnak"><i class="mail icon"></i>E-mail</a>
+          </div>
+        </div>
       </div>
       <div class="ui inverted divider"></div>
       <div class="ui horizontal inverted small divided link list">
-        <a class="item" href="http://semantic-ui.com/examples/sticky.html#">Designed by PeiYao Chang</a>
-        <a class="item" href="#">Privacy Policy</a>
+        <a class="item">Modified by HaoYou Hung</a>
       </div>
     </div>
   </div>
